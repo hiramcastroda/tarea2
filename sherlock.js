@@ -1,5 +1,4 @@
 //Input Example
-
 _INPUT = "2\n3 9\n17 24";
 
 //Expected Output
@@ -20,5 +19,30 @@ _INPUT = "2\n3 9\n17 24";
 0
 1
 */
+console.log("Input "+_INPUT);	
+INPUT = _INPUT.split("\n");
+
+for(i=1;i< INPUT.length;i++){
+A=INPUT[i].split(' ');  
+B= A[0];  
+T= A[1];  
+contador=0;
+while (B<=T){
+	if(B<0){
+		console.log("Error no existen Raices Negativas");
+		break;
+	}
+	else{
+		Raiz=Math.sqrt(B);
+			if(Raiz % 1!=0){
+			B++;
+			}else{
+				contador++;
+				B++;
+			}
+		}
+	}
+console.log(contador);
+}
 
 //----- Start your code here -------
